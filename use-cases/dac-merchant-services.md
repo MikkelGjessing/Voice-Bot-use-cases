@@ -1,81 +1,76 @@
-# Voice Bot Use Cases – DAC Merchant Services
+# Voice Bot Use Cases – DAC Merchant Services (Real-Time Translation)
 
 > **Region:** DAC (Germany, Austria, Switzerland)
 > **Platform:** Boost PoC (reusable for Genesis, Sinch, Found Ever)
-> **Note:** Boost is not currently part of the DAC merchant services platform. Use cases documented here for future platform evaluation (Genesis, Sinch, Found Ever).
+> **Focus:** Real-time voice translation between customer and agent languages
 > **Last updated:** July 2026
 
 ---
 
-## Category 1 – Smart Switchboard (Intent Routing)
+## Overview
 
-| # | Use Case | Description | Language | Priority |
-|---|----------|-------------|----------|----------|
-| 1.1 | Intent routing – general merchant enquiry | Customer calls and explains issue; voice bot routes to correct queue | German | High |
-| 1.2 | Error transfer elimination – terminal queue | Customer intending terminal support routed directly without hitting wrong queue | German | High |
-| 1.3 | Error transfer elimination – e-com queue | Customer intending e-com support routed directly | German | High |
-| 1.4 | Error transfer elimination – acquiring queue | Customer intending acquiring support routed directly | German | Medium |
-| 1.5 | SMS self-service link delivery | After routing, SMS with relevant self-service links sent to caller | German | High |
-| 1.6 | Killer question filtering – new vs. existing merchant | Voice bot distinguishes onboarding calls from support calls | German | Medium |
-| 1.7 | Out-of-hours routing | Outside business hours, voice bot handles routing and deflects to self-service | German | Medium |
+The DAC region has a large population of non-German native speakers, particularly Turkish and Arabic speakers in Germany, as well as three official languages across Switzerland (German, French, Italian). These use cases cover scenarios where a customer calls in their native language and is connected to an agent speaking a different language, with Boost providing live two-way translation during the call.
 
 ---
 
-## Category 2 – Terminal Error Code Handling
-
-| # | Use Case | Description | Language | Priority |
-|---|----------|-------------|----------|----------|
-| 2.1 | Error code lookup – customer reads code | Customer reads terminal error code; voice bot provides resolution steps | German | High |
-| 2.2 | Error code lookup – DTMF fallback | Customer inputs error code via keypad if speech recognition fails | German | High |
-| 2.3 | Common error code self-resolution | Voice bot resolves top 10 most frequent terminal error codes | German | High |
-| 2.4 | Terminal activation guidance | Voice bot walks new merchant through terminal activation steps | German | High |
-| 2.5 | Error code escalation to agent | If error code unknown or complex, voice bot transfers with context pre-filled | German | Medium |
-| 2.6 | Terminal reboot guidance | Voice bot guides customer through terminal restart steps | German | Medium |
-| 2.7 | Terminal connectivity troubleshooting | Voice bot walks customer through connectivity checks | German | Medium |
-
----
-
-## Category 3 – Real-Time Voice Translation (Multilingual DAC)
-
-The DAC region has a large population of non-German native speakers. These use cases address multilingual support needs.
+## Category 1 – Non-German Speakers → German-Speaking Agent
 
 | # | Use Case | Description | Customer Language | Agent Language | Priority |
 |---|----------|-------------|-------------------|----------------|----------|
-| 3.1 | Turkish → German | Turkish-speaking merchant to German-speaking agent | Turkish | German | High |
-| 3.2 | Arabic → German | Arabic-speaking merchant to German-speaking agent | Arabic | German | High |
-| 3.3 | Turkish → English | Turkish-speaking merchant to English-speaking agent | Turkish | English | Medium |
-| 3.4 | Arabic → English | Arabic-speaking merchant to English-speaking agent | Arabic | English | Medium |
-| 3.5 | Swiss German → Standard German | Swiss German dialect speaker to Standard German agent | Swiss German | German | High |
-| 3.6 | French (Swiss) → German | Swiss French speaker to German-speaking agent | French (Swiss) | German | High |
-| 3.7 | Italian (Swiss) → German | Swiss Italian speaker to German-speaking agent | Italian (Swiss) | German | High |
-| 3.8 | French (Swiss) → French | Swiss French speaker to French-speaking agent | French (Swiss) | French | Medium |
-| 3.9 | Italian (Swiss) → Italian | Swiss Italian speaker to Italian-speaking agent | Italian (Swiss) | Italian | Medium |
-| 3.10 | German → Polish | German-speaking customer to Polish-speaking agent in Krakow | German | Polish | Medium |
-| 3.11 | German → German | Same-language baseline test to validate translation layer quality | German | German | High |
+| 1.1 | Turkish → German | Turkish-speaking merchant to German-speaking agent | Turkish | German | High |
+| 1.2 | Arabic → German | Arabic-speaking merchant to German-speaking agent | Arabic | German | High |
+| 1.3 | Swiss French → German | Swiss French-speaking merchant to German-speaking agent | French (Swiss) | German | High |
+| 1.4 | Swiss Italian → German | Swiss Italian-speaking merchant to German-speaking agent | Italian (Swiss) | German | High |
+| 1.5 | Swiss German dialect → Standard German | Swiss German dialect speaker to Standard German-speaking agent | Swiss German | German | High |
 
 ---
 
-## Category 4 – Live Agent Assist (In-Call AI Support)
+## Category 2 – Non-German Speakers → English-Speaking Agent
 
-| # | Use Case | Description | Language | Priority |
-|---|----------|-------------|----------|----------|
-| 4.1 | Real-time translation overlay for agent | Agent sees live translation of what customer is saying | Turkish / Arabic / Swiss variants | High |
-| 4.2 | Knowledge article suggestion during call | Platform suggests relevant knowledge articles to agent based on conversation | German | Medium |
-| 4.3 | After-call work automation | Platform generates call summary for agent at end of conversation | German / Polish | Medium |
-| 4.4 | Dialect normalisation | Swiss German dialect speech normalised to Standard German for agent | Swiss German | High |
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 2.1 | Turkish → English | Turkish-speaking merchant to English-speaking agent | Turkish | English | Medium |
+| 2.2 | Arabic → English | Arabic-speaking merchant to English-speaking agent | Arabic | English | Medium |
 
 ---
 
-## Category 5 – Full Voice Bot Automation (Self-Service)
+## Category 3 – Swiss Official Languages → Native Agent
 
-| # | Use Case | Description | Language | Priority |
-|---|----------|-------------|----------|----------|
-| 5.1 | Terminal activation guidance | Voice bot walks new merchant through terminal activation steps | German | High |
-| 5.2 | Settlement enquiry | Voice bot answers questions about settlement timing and amounts | German | Medium |
-| 5.3 | Chargeback status enquiry | Voice bot provides status on open chargebacks | German | Medium |
-| 5.4 | Statement / invoice enquiry | Voice bot directs merchant to portal or sends self-service link | German | Medium |
-| 5.5 | Contract / fee enquiry | Voice bot answers common questions about fees and contract terms | German | Low |
-| 5.6 | Fraud alert handling | Voice bot confirms fraud alert and routes to specialist queue | German / Turkish | Medium |
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 3.1 | Swiss French → French | Swiss French-speaking merchant to French-speaking agent | French (Swiss) | French | Medium |
+| 3.2 | Swiss Italian → Italian | Swiss Italian-speaking merchant to Italian-speaking agent | Italian (Swiss) | Italian | Medium |
+
+---
+
+## Category 4 – German → Polish (Krakow Agent Centre)
+
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 4.1 | German → Polish | German-speaking merchant to Polish-speaking agent in Krakow | German | Polish | Medium |
+| 4.2 | Turkish → Polish | Turkish-speaking merchant to Polish-speaking agent in Krakow | Turkish | Polish | Low |
+
+---
+
+## Category 5 – Baseline & Quality Validation
+
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 5.1 | German → German | Same-language call to validate that translation layer adds no degradation | German | German | High |
+| 5.2 | Turkish → Turkish | Same-language baseline test for Turkish | Turkish | Turkish | Medium |
+
+---
+
+## Category 6 – Live Agent Assist During Translation
+
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 6.1 | Live translation overlay – Turkish to German | Agent sees live Turkish-to-German text translation during the call | Turkish | German | High |
+| 6.2 | Live translation overlay – Arabic to German | Agent sees live Arabic-to-German text translation during the call | Arabic | German | High |
+| 6.3 | Live translation overlay – Swiss variants to German | Agent sees live translation of Swiss French or Italian to German | French (Swiss) / Italian (Swiss) | German | High |
+| 6.4 | Swiss German dialect normalisation | Swiss German dialect speech is normalised to Standard German for the agent in real time | Swiss German | German | High |
+| 6.5 | Bidirectional translation | Agent response is also translated back to customer's language in real time | All DAC languages | German / English / Polish | High |
+| 6.6 | After-call summary in agent language | Platform generates a post-call summary in the agent's language after the conversation | All DAC languages | German / Polish | Medium |
 
 ---
 
@@ -83,16 +78,16 @@ The DAC region has a large population of non-German native speakers. These use c
 
 | Platform | DAC Availability | Notes |
 |----------|-----------------|-------|
-| **Boost** | ❌ Not available | Use cases documented for other platforms |
-| **Genesis** | ✅ Available | Primary platform for DAC; terminal activation use case already planned |
-| **Sinch** | 🔍 To evaluate | Overlap with Genesis; real-time translation and speech analytics offered |
-| **Found Ever** | 🔍 To evaluate | Offered free of charge for 3 years; no phone system integration required; may be limited for knowledge article answering |
+| **Boost** | ❌ Not currently available | Use cases documented for evaluation with other platforms |
+| **Genesis** | ✅ Available | Primary platform for DAC |
+| **Sinch** | 🔍 To evaluate | Real-time translation and speech analytics offered |
+| **Found Ever** | 🔍 To evaluate | Offered free of charge for 3 years; no phone system integration required |
 
 ---
 
 ## Notes
 
 - Turkish and Arabic use cases are driven by large non-German-speaking merchant populations in Germany
-- Swiss variant use cases cover three official languages: German (Swiss dialect), French, and Italian
-- Terminal activation use case for DAC is already identified as a priority by operations
-- This list should be evaluated against Found Ever and Genesis capabilities before finalising PoC scope
+- Swiss variant use cases cover three official languages: Swiss German dialect, French, and Italian
+- Baseline tests (Category 5) should always be run first to establish a quality benchmark
+- This list should be evaluated against Genesis, Sinch, and Found Ever capabilities before finalising PoC scope
