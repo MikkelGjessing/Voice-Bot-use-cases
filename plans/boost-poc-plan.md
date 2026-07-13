@@ -14,6 +14,10 @@ The list is generic enough to reuse across other platform evaluations (Genesis, 
 - [x] Create phased project plan (`plans/boost-poc-plan.md`)
 - [x] Generate real-time translation use case list for Nordic merchant services
 - [x] Generate real-time translation use case list for DAC merchant services
+- [x] Map CRM categories to use cases (`crm-category-mapping.md`)
+- [x] Expand Nordic use cases to cover all CRM case handling categories (Pricing, Retention, Fraud & Dispute)
+- [x] Expand DAC use cases to cover all CRM case handling categories (Pricing, Retention, Fraud & Dispute) with DAC CRM tags
+- [x] Achieve full CRM-to-use-case traceability across both regions
 
 ## Phase 2 – Prioritisation & PoC Scoping
 
