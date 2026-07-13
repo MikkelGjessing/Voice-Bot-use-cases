@@ -61,9 +61,65 @@ These use cases cover scenarios where Boost remains active in the call after tra
 
 ---
 
+---
+
+## Category 5 – Pricing & Commercial Support Calls
+
+> **CRM categories:** `CA_40700000` – Pricing MS · `CA_50000000` – MS Repricing
+
+These use cases cover inbound calls related to terminal pricing, fee queries, and repricing requests. Translation is required when the merchant's language differs from the agent's language.
+
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 5.1 | Danish pricing query → Polish | Danish merchant calls about terminal pricing or fee structure; Polish agent handles with live translation | Danish | Polish | High |
+| 5.2 | Swedish repricing request → Polish | Swedish merchant requests a repricing review; Polish agent handles with live translation | Swedish | Polish | High |
+| 5.3 | Norwegian pricing dispute → Polish | Norwegian merchant disputes a charge on their account; Polish agent handles with live translation | Norwegian | Polish | High |
+| 5.4 | Finnish fee query → Polish | Finnish merchant queries transaction fees or rate card; Polish agent handles with live translation | Finnish | Polish | High |
+| 5.5 | Danish pricing query → English | Danish merchant calls about pricing; English-speaking agent handles with live translation | Danish | English | Medium |
+| 5.6 | Swedish repricing request → English | Swedish merchant discusses repricing options with English-speaking agent | Swedish | English | Medium |
+
+---
+
+## Category 6 – Retention Calls
+
+> **CRM categories:** `CA_00500000` – Retention Nordic - Service · `CA_00510000` – Retention Nordic - Info
+
+These use cases cover calls where merchants are at risk of churning and are handled by a retention specialist. Real-time translation is critical to ensure the agent can effectively address the merchant's concerns.
+
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 6.1 | Danish retention – service complaint → Polish | Danish merchant threatens to cancel service due to a service issue; Polish retention agent handles with live translation | Danish | Polish | High |
+| 6.2 | Swedish retention – info/general → Polish | Swedish merchant is considering cancellation and requests information; Polish retention agent handles with live translation | Swedish | Polish | High |
+| 6.3 | Norwegian retention – service complaint → Polish | Norwegian merchant raises a service complaint in a retention context; Polish agent handles with live translation | Norwegian | Polish | High |
+| 6.4 | Finnish retention – service complaint → Polish | Finnish merchant calls about service dissatisfaction with cancellation risk; Polish agent handles with live translation | Finnish | Polish | High |
+| 6.5 | Danish retention – service complaint → English | Danish merchant in churn risk calls to English-speaking retention agent with live translation | Danish | English | Medium |
+| 6.6 | Swedish retention – info/general → English | Swedish merchant seeks information before deciding to cancel; English agent handles with live translation | Swedish | English | Medium |
+
+---
+
+## Category 7 – Fraud & Dispute Calls
+
+> **CRM categories:** `CA_00850000` – Fraud & Dispute (and related dispute/fraud sub-categories)
+
+These use cases cover inbound calls related to suspected fraud on a merchant's terminal, disputed transactions, or chargeback queries. Real-time translation ensures the merchant can report sensitive details accurately.
+
+| # | Use Case | Description | Customer Language | Agent Language | Priority |
+|---|----------|-------------|-------------------|----------------|----------|
+| 7.1 | Danish fraud report → Polish | Danish merchant reports suspected fraud on their terminal; Polish agent handles with live translation | Danish | Polish | High |
+| 7.2 | Swedish dispute query → Polish | Swedish merchant queries a chargeback or disputed transaction; Polish agent handles with live translation | Swedish | Polish | High |
+| 7.3 | Norwegian fraud report → Polish | Norwegian merchant reports an unauthorised transaction or suspicious activity; Polish agent handles with live translation | Norwegian | Polish | High |
+| 7.4 | Finnish dispute query → Polish | Finnish merchant raises a dispute about a transaction; Polish agent handles with live translation | Finnish | Polish | High |
+| 7.5 | Danish fraud report → English | Danish merchant reports fraud to an English-speaking agent with live translation | Danish | English | Medium |
+| 7.6 | Norwegian dispute query → English | Norwegian merchant queries a disputed transaction with an English-speaking agent | Norwegian | English | Medium |
+
+---
+
 ## Notes
 
 - All **High** priority use cases are candidates for the initial Boost PoC
 - The Nordic → Polish combinations are the most critical given the ongoing agent relocation to Krakow
 - Baseline tests (Category 3) should always be run first to establish a quality benchmark before testing cross-language pairs
+- Categories 5–7 expand coverage to all CRM case handling types identified in `crm-category-mapping.md`
+- Retention calls (Category 6) are high-sensitivity; translation accuracy is especially critical for agent empathy and merchant trust
+- Fraud & Dispute calls (Category 7) require precise translation of amounts, dates, and transaction IDs – these are strong candidates for after-call summary use cases (Category 4.6)
 - This list should be reviewed jointly with Oscar (issuing, Nordics + DAC) before finalising PoC scope
